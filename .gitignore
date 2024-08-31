@@ -10,6 +10,9 @@
 *.userosscache
 *.sln.docstates
 
+# Firebase
+server/config/food-del-3bf6f-firebase-adminsdk-b6vpv-637983329b.json
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

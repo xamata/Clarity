@@ -1,0 +1,20 @@
+{
+	"name": "backend",
+	"version": "1.0.0",
+	"main": "server.js",
+	"devDependencies": {},
+	"type": "module",
+	"scripts": {
+		"server": "nodemon server.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.19.2",
+		"firebase-admin": "^12.3.1",
+		"mongoose": "^8.5.3",
+		"nodemon": "^3.1.4"
+	}
+}
