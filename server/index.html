@@ -22,6 +22,24 @@
 				opacity: 0;
 				transform: translateY(20px);
 				animation: fadeInSlideUp 1.5s ease-out forwards;
+				text-align: center;
+			}
+
+			.button {
+				display: inline-block;
+				margin-top: 20px;
+				padding: 10px 20px;
+				font-size: 1.2rem;
+				color: #fff;
+				background-color: #007bff;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				text-decoration: none;
+			}
+
+			.button:hover {
+				background-color: #0056b3;
 			}
 
 			@keyframes fadeInSlideUp {
@@ -37,6 +55,12 @@
 		</style>
 	</head>
 	<body>
-		<div class="welcome">Welcome to Our Website!</div>
+		<div class="welcome">
+			Welcome to Our API!
+			<br />
+			<a href="http://localhost:3000/api-docs" class="button"
+				>Go to API Documentation</a
+			>
+		</div>
 	</body>
 </html>
