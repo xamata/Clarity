@@ -1,6 +1,6 @@
 import express from 'express';
 import { connectDb } from './config/db.js';
-import cors from 'cors';
+// import cors from 'cors';
 import userRouter from './routes/userRoutes.js';
 import admin from 'firebase-admin';
 import serviceAccount from './config/food-del-3bf6f-firebase-adminsdk-b6vpv-637983329b.json' assert {type: 'json'};
@@ -8,7 +8,7 @@ import serviceAccount from './config/food-del-3bf6f-firebase-adminsdk-b6vpv-6379
 // app config
 const app = express();
 const port = 4000;
-const __dirname = '.'
+const __dirname = 'server/index.html'
 
 // dbConnection
 connectDb();
@@ -20,11 +20,13 @@ admin.initializeApp({
 
 // middleware
 app.use(express.json());
-app.use(cors);
+// app.use(cors);
 
 // api endpoints
 app.use("/api/user", userRouter)
 
-app.get('/', function (req, res) { res.sendFile(path.join(__dirname, '/index.html')); })
+app.get("/", (request, response) => {
+    response.send("API Working")
+});
 
 app.listen(port, () => { console.log(`Server Started on http://localhost:${port}`) })
